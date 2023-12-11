@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "149260196149",
+    "firebase_url": "https://esp32-to-firebase-48d58-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "esp32-to-firebase-48d58",
+    "storage_bucket": "esp32-to-firebase-48d58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149260196149:android:b1c4054fa046469f1ad47c",
+        "android_client_info": {
+          "package_name": "com.example.finalsmartterraapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149260196149-dqjko0sc749iic0o8en7pvtpdk8b0of7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCctv47HKN0mu1_9odF9OW6BKGlKnZUrUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149260196149-dqjko0sc749iic0o8en7pvtpdk8b0of7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149260196149:android:d55bcf95a35b0a831ad47c",
+        "android_client_info": {
+          "package_name": "com.example.greengreenproj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149260196149-dqjko0sc749iic0o8en7pvtpdk8b0of7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCctv47HKN0mu1_9odF9OW6BKGlKnZUrUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149260196149-dqjko0sc749iic0o8en7pvtpdk8b0of7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149260196149:android:6295d157466a0f8e1ad47c",
+        "android_client_info": {
+          "package_name": "com.example.smartterrarium_one"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149260196149-dqjko0sc749iic0o8en7pvtpdk8b0of7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCctv47HKN0mu1_9odF9OW6BKGlKnZUrUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149260196149-dqjko0sc749iic0o8en7pvtpdk8b0of7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
