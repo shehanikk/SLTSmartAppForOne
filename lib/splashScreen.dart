@@ -1,4 +1,5 @@
 import 'package:finalsmartterraapp/login.dart';
+import 'package:finalsmartterraapp/otpemailbtn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:video_player/video_player.dart';
@@ -39,7 +40,7 @@ class _NewSplashScreenState extends State<NewSplashScreen>
       Future.delayed(Duration(seconds: 5), () {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-            builder: (_) => SignInScreen(),
+            builder: (_) => OtpEmailBtnPage(),
           ),
         );
       });

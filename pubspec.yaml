@@ -40,6 +40,7 @@ dependencies:
   firebase_database: ^10.3.2
   firebase_core: ^2.24.0
   intl: ^0.18.1
+  pinput: ^3.0.1
 
 dev_dependencies:
   flutter_test:
