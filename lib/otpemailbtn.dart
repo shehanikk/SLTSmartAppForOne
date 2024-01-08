@@ -16,28 +16,14 @@ class _OtpEmailBtnPageState extends State<OtpEmailBtnPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff073d07),
-        automaticallyImplyLeading: false,
-        title: Center(
-          child: Text(
-            'ECOGARDEN',
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        toolbarHeight: 50,
-      ),
+
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              hexStringToColor("F9FFFA"),
-              hexStringToColor("3A14A460"),
-              hexStringToColor("F9FFFA")
+              hexStringToColor("FFFFFF"),
+              hexStringToColor("FFFFFF"),
+              hexStringToColor("084218")
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -47,9 +33,14 @@ class _OtpEmailBtnPageState extends State<OtpEmailBtnPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('images/otp.png', height: 380, width: 300,),
+              Image.asset('images/singinImg.png',  width: 300,),
+              SizedBox(height: 30,),
+              Text('Welcome To EcoGarden', style: TextStyle(
+                  fontSize: 22, fontWeight: FontWeight.bold
+              ),),
+              SizedBox(height: 30,),
               Container(
-                width: 280,
+                width: 300,
                 height: 53,
                 child: ElevatedButton(
                   onPressed: () {
@@ -65,16 +56,16 @@ class _OtpEmailBtnPageState extends State<OtpEmailBtnPage> {
                     shape: MaterialStateProperty.all<OutlinedBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
-                            15.0), // Adjust the radius as needed
+                            90), // Adjust the radius as needed
                       ),
                     ),
                   ),
-                  child: Text('Email Verification'),
+                  child: Text('Email Verification', style: TextStyle(color: Colors.white, fontSize: 16),),
                 ),
               ),
               SizedBox(height: 19),
               Container(
-                width: 280,
+                width: 300,
                 height: 53,
                 child: ElevatedButton(
                   onPressed: () {
@@ -90,36 +81,41 @@ class _OtpEmailBtnPageState extends State<OtpEmailBtnPage> {
                     shape: MaterialStateProperty.all<OutlinedBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
-                            15.0), // Adjust the radius as needed
+                            90), // Adjust the radius as needed
                       ),
                     ),
                   ),
-                  child: Text('Phone Verification'),
+                  child: Text('Phone Verification', style: TextStyle(color: Colors.white, fontSize: 16),),
                 ),
               ),
-              SizedBox(height: 19),
 
-              InkWell(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (_) => GreenHouseHome(),
+              SizedBox(height: 19),
+              Container(
+                width: 300,
+                height: 53,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => GreenHouseHome(),
+                      ),
+                    );
+                  },
+                  style: ButtonStyle(
+                    backgroundColor:
+                    MaterialStateProperty.all<Color>(Color(0xff073d07)),
+                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                            90), // Adjust the radius as needed
+                      ),
                     ),
-                  );
-                },
-                child: Container(
-                  child: Text(
-                    'Skip',
-                    style: TextStyle(
-                      fontSize: 16,
-                      decoration:
-                      TextDecoration.underline, // Underline the text
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
                   ),
+                  child: Text('Skip', style: TextStyle(color: Colors.white, fontSize: 16),),
                 ),
-              )
+              ),
+
             ],
           ),
         ),

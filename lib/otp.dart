@@ -1,4 +1,5 @@
 import 'package:finalsmartterraapp/Home.dart';
+import 'package:finalsmartterraapp/otpemailbtn.dart';
 import 'package:finalsmartterraapp/phone.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -41,13 +42,16 @@ class _MyOtpState extends State<MyOtp> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(onPressed: () {
-          Navigator.pop(context);
-        }, icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.black,)),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.black,),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => OtpEmailBtnPage()), // Replace EmailScreen with the actual name of your widget
+            );
+          },
+        ),
       ),
-
 
       body: Container(
         margin: EdgeInsets.only(left: 25, right: 25),
@@ -56,7 +60,7 @@ class _MyOtpState extends State<MyOtp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('images/otp.png', height: 150, width: 150,),
+              Image.asset('images/sihj.png', height: 250, width: 250,),
               SizedBox(height: 25,),
 
 
@@ -83,7 +87,7 @@ class _MyOtpState extends State<MyOtp> {
 
               SizedBox(height: 20,),
               SizedBox(
-                height: 45,
+                height: 50,
                 width: double.infinity,
                 child:   ElevatedButton(
                   onPressed: () async{
@@ -104,10 +108,10 @@ class _MyOtpState extends State<MyOtp> {
                     }
 
                   },
-                  child: Text('Verify phone number'), style: ElevatedButton.styleFrom(
-                  primary: Colors.green.shade600,
+                  child: Text('Verify phone number', style: TextStyle(color: Colors.white, fontSize: 16),), style: ElevatedButton.styleFrom(
+                  primary: Colors.green.shade900,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(90),
                   ),
                 ),),
               ),

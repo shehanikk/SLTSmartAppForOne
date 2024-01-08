@@ -1,4 +1,5 @@
 import 'package:finalsmartterraapp/Home.dart';
+import 'package:finalsmartterraapp/otpemailbtn.dart';
 import 'package:finalsmartterraapp/profile.dart';
 import 'package:finalsmartterraapp/reset_password.dart';
 import 'package:finalsmartterraapp/reusable_widgets/reusable_widget.dart';
@@ -20,28 +21,49 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.black,),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => OtpEmailBtnPage()), // Replace EmailScreen with the actual name of your widget
+            );
+          },
+        ),
+      ),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-              hexStringToColor("F9FFFA"),
-              hexStringToColor("3AA467"),
-              hexStringToColor("013212")
+              hexStringToColor("FFFFFF"),
+              hexStringToColor("FFFFFF"),
+              hexStringToColor("FFFFFF")
             ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.fromLTRB(
-                20, MediaQuery.of(context).size.height * 0.1, 20, 0),
+                20, MediaQuery.of(context).size.height * 0, 20, 0),
             child: Column(
               children: <Widget>[
-                
+
                 logoWidget("images/singinImg.png"),
                 const SizedBox(
                   height: 20,
                 ),
-                
-                Text("WELCOME TO ECOGARDEN", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),),
+
+                Text("Email Verification", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black),),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Enter your email address and password',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
                 const SizedBox(
                   height: 50,
                 ),
@@ -56,7 +78,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 5,
                 ),
                 forgetPassword(context),
-                firebaseUIButton(context, "LOGIN", () {
+                firebaseUIButton(context, "Login", () {
                   FirebaseAuth.instance
                       .signInWithEmailAndPassword(
                       email: _emailTextController.text,
@@ -82,7 +104,7 @@ class _SignInScreenState extends State<SignInScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text("Don't have account?",
-            style: TextStyle(color: Colors.white70)),
+            style: TextStyle(color: Colors.black54)),
         GestureDetector(
           onTap: () {
             Navigator.push(context,
@@ -90,7 +112,7 @@ class _SignInScreenState extends State<SignInScreen> {
           },
           child: const Text(
             " Sign Up",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         )
       ],
@@ -105,7 +127,7 @@ class _SignInScreenState extends State<SignInScreen> {
       child: TextButton(
         child: const Text(
           "Forgot Password?",
-          style: TextStyle(color: Colors.white70),
+          style: TextStyle(color: Colors.black),
           textAlign: TextAlign.right,
         ),
         onPressed: () => Navigator.push(

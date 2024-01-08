@@ -1,4 +1,5 @@
 import 'package:finalsmartterraapp/Home.dart';
+import 'package:finalsmartterraapp/login.dart';
 import 'package:finalsmartterraapp/profile.dart';
 import 'package:finalsmartterraapp/reusable_widgets/reusable_widget.dart';
 import 'package:finalsmartterraapp/utils/color_utils.dart';
@@ -21,12 +22,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        iconTheme: IconThemeData(color: Colors.white),
-        elevation: 0,
-        title: const Text(
-          "SIGN UP",
-          style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold, color: Colors.white),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.black,),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SignInScreen()), // Replace EmailScreen with the actual name of your widget
+            );
+          },
         ),
       ),
       body: Container(
@@ -34,18 +37,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-                hexStringToColor("013212"),
-                hexStringToColor("3AA467"),
-                hexStringToColor("F9FFFA"),
+                hexStringToColor("FFFFFF"),
+                hexStringToColor("FFFFFF"),
+                hexStringToColor("FFFFFF"),
               ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
           child: SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
+                padding: EdgeInsets.fromLTRB(20, 110, 20, 0),
                 child: Column(
                   children: <Widget>[
 
-                    const SizedBox(
-                      height: 20,
+                    Text("Create an Account", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black),),
+                    SizedBox(
+                      height: 30,
                     ),
                     reusableTextField("Enter Username", Icons.person, false,
                         _userNameTextController),
@@ -62,7 +66,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(
                       height: 20,
                     ),
-                    firebaseUIButton(context, "SIGN UP", () {
+                    firebaseUIButton(context, "Sign up", () {
                       FirebaseAuth.instance
                           .createUserWithEmailAndPassword(
                           email: _emailTextController.text,
