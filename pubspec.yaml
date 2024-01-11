@@ -41,6 +41,7 @@ dependencies:
   firebase_core: ^2.24.0
   intl: ^0.18.1
   pinput: ^3.0.1
+  firebase_core_web: ^2.10.0
 
 dev_dependencies:
   flutter_test:
