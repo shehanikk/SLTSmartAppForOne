@@ -1,8 +1,8 @@
-# Eco Garden Application
+# Eco Garden: Smart Terrarium Management App
 
-A new Flutter project.
+Welcome to Eco Garden, your ultimate smart terrarium companion! This mobile app lets you easily control and monitor your terrarium's environment. Adjust temperature, humidity, Moisture and light settings effortlessly, ensuring a thriving ecosystem.
 
-## Getting Started
+## Features:
 
 This project is a starting point for a Flutter application.
 
