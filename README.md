@@ -1,4 +1,4 @@
-# finalsmartterraapp
+# Eco Garden Application
 
 A new Flutter project.
 
