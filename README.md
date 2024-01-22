@@ -36,7 +36,7 @@ Choose between manual and automatic actuator control. In manual mode, users have
   <img src="https://github.com/shehanikk/SLTSmartAppForOne/assets/87534063/db6d5534-18d5-4008-8f47-9d5c284811de" width="200" alt="Screenshot 1">
 </p>
 
-### 5. AUser-Friendly Interface
+### 5. User-Friendly Interface
 
 Enjoy a user-friendly interface designed for easy navigation and quick access to smart terrarium management features. Eco Garden simplifies the process of maintaining and enhancing your terrarium environment.
 
